@@ -48,3 +48,64 @@ function getGrandTotal(arr) {
     arr.forEach(e=> total = parseFloat(e['Subtotal']) + total)
     return parseFloat(total).toFixed(2);
 }
+
+/**
+ * Test if affect performance
+ */
+// inputs = [
+//     {
+//         Barcode: 'ITEM000000',
+//         Name: 'Coca-Cola',
+//         Unit: 'bottle',
+//         Price: 3.00
+
+//     },
+//     {
+//         Barcode: 'ITEM000000',
+//         Name: 'Coca-Cola',
+//         Unit: 'bottle',
+//         Price: 3.00
+//     },
+//     {
+//         Barcode: 'ITEM000000',
+//         Name: 'Coca-Cola',
+//         Unit: 'bottle',
+//         Price: 3.00
+//     },
+//     {
+//         Barcode: 'ITEM000000',
+//         Name: 'Coca-Cola',
+//         Unit: 'bottle',
+//         Price: 3.00
+//     },
+//     {
+//         Barcode: 'ITEM000000',
+//         Name: 'Coca-Cola',
+//         Unit: 'bottle',
+//         Price: 3.00
+//     },
+//     {
+//         Barcode: 'ITEM000001',
+//         Name: 'Sprite',
+//         Unit: 'bottle',
+//         Price: 3.00
+//     },
+//     {
+//         Barcode: 'ITEM000001',
+//         Name: 'Sprite',
+//         Unit: 'bottle',
+//         Price: 3.00
+//     },
+//     {
+//         Barcode: 'ITEM000004',
+//         Name: 'Battery',
+//         Unit: 'a',
+//         Price: 2.00
+//     }
+// ];
+// let d = new Date();
+// var t0 = parseFloat(d.getMilliseconds());
+// main(inputs);
+// var t1 = parseFloat(d.getMilliseconds());
+// console.log(t0)
+// console.log(t1)
