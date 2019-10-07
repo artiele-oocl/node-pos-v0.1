@@ -1,18 +1,13 @@
 module.exports = function main(input) {
-    // function main(input) {    
-    // return input;
-    // console.log('***<store earning no money>Receipt ***\n');
-    // console.log('----------------------\n');
-    // console.log('**********************\n');
-    
-    AggregateSubtotal(input)
+    const out = aggregateSubtotal(input)
+    return renderText(out);
 };
 
 function isInObject(object,val){
     return object.some(ov => ov.Name === val)
 }
 
-function AggregateSubtotal(input) {
+function aggregateSubtotal(input) {
     let arr = [];
     input.forEach(e => {
         if (arr.length === 0 || isInObject(arr,e.Name) === false) {
@@ -27,4 +22,13 @@ function AggregateSubtotal(input) {
         }
     });
     return arr;
+}
+
+function renderText(params) {
+    out='***<store earning no money>Receipt ***\n' +
+    //object to string
+    '----------------------\n' +
+    'Total: 23.00 (yuan)\n' +
+    '**********************\n';
+    return out;
 }
