@@ -34,13 +34,13 @@ function renderText(obj) {
 }
 
 function objectToString(arr) {
-    let s = '';
+    let objectToString = '';
     arr.map(o=>{
         let unit=' bottles'
         if (o.Name === 'Battery') unit = '';
-        s += `Name: ${o.Name}, Quantity: ${o.Quantity}${unit}, Unit price: ${o['Unit price']} (yuan), Subtotal: ${o['Subtotal']} (yuan)\n`        
+        objectToString += `Name: ${o.Name}, Quantity: ${o.Quantity}${unit}, Unit price: ${o['Unit price']} (yuan), Subtotal: ${o['Subtotal']} (yuan)\n`        
     });
-    return s;
+    return objectToString;
 }
 
 function getGrandTotal(arr) {
