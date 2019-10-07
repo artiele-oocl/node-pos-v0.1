@@ -28,7 +28,7 @@ function renderText(params) {
     out='***<store earning no money>Receipt ***\n' +
     //object to string
     '----------------------\n' +
-    'Total: 23.00 (yuan)\n' +
+    `Total: ${} (yuan)\n` +
     '**********************\n';
     return out;
 }
